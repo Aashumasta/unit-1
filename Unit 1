@@ -1,0 +1,503 @@
+In [1]:
+teststr="Lakshmi"
+new_str = ""
+for i in range(len(teststr)):
+    if i != 2:
+        new_str = new_str + teststr[i]
+    print ("The string after removal of i'th character : " + new_str)
+The string after removal of i'th character : L
+The string after removal of i'th character : La
+The string after removal of i'th character : La
+The string after removal of i'th character : Las
+The string after removal of i'th character : Lash
+The string after removal of i'th character : Lashm
+The string after removal of i'th character : Lashmi
+In [2]:
+def multiplication_or_sum(num1, y):
+    product = num1 * num2
+    if product <=1000:
+        return product
+    else:
+        return num1 + num2
+
+result = multiplication_or_sum(20,30)
+print("The result is = ", result)
+result = multiplication_or_sum(50,10)
+print("The result is = ", result)
+The result is =  600
+The result is =  500
+In [3]:
+num = 0
+for i in range(10):
+    sum = num + i
+    print(f'Current number {i} Previous Number {num} is {sum}')
+    num = i
+Current number 0 Previous Number 0 is 0
+Current number 1 Previous Number 0 is 1
+Current number 2 Previous Number 1 is 3
+Current number 3 Previous Number 2 is 5
+Current number 4 Previous Number 3 is 7
+Current number 5 Previous Number 4 is 9
+Current number 6 Previous Number 5 is 11
+Current number 7 Previous Number 6 is 13
+Current number 8 Previous Number 7 is 15
+Current number 9 Previous Number 8 is 17
+In [ ]:
+print("Please enter text to print::")
+inputchars = input()
+if inputchars:
+    string = ""
+     for i in inputchars:
+            if inputchars.index(i)%2 == 0:
+                 string += str(i)
+                     print("You Entered:", inputchars)
+                    print("Result:")
+                    print(string)
+In [ ]:
+nums = [] 
+for i in range(5): 
+    num = int(input('Give me a number:')) 
+    nums.append(num) 
+ 
+ for i in nums: 
+    if i % 5 == 0: 
+        print(i)
+In [6]:
+message = 'My name is Lakshmi'
+print('Number of occurrence of is:', message.count('is'))
+Number of occurrence of is: 1
+In [7]:
+print('My', 'Name', 'Is', 'James', sep='**')
+My**Name**Is**James
+In [8]:
+num = 8
+print('%o' % num)
+10
+In [ ]:
+numbers = []
+for i in range(0, 5):
+    print("Enter number at location", i, ":")
+    item = float(input())
+    numbers.append(item)
+print("User List:", numbers)
+In [ ]:
+a, b, c = input("Enter three values: ").split()
+print("Enter Your First Name: ", a)  
+print("Enter Your Last Name: ", b)  
+print("Enter Your Class: ", c)  
+print("First name {},Second name {}, Class {}".format(a,b,c))
+In [9]:
+for income in [5000,10000,16777]:
+
+    if income <= 10_000:
+        tax = 0
+    elif income <= 20_000: 
+        tax = (income - 10_000) * 0.1              
+    else:
+        tax = (income-20_000) * 0.2 +  10_000*0.1  
+
+    print(f"For income {income}, You owe {tax} dollars in tax!" )
+For income 5000, You owe 0 dollars in tax!
+For income 10000, You owe 0 dollars in tax!
+For income 16777, You owe 677.7 dollars in tax!
+In [10]:
+username=input("Enter Your Name: ")
+if username=='Bond':
+     print("Welcome on board 007.")
+else:
+    print("Good morning",username)
+Good morning <PyodideFuture pending cb=[WebLoop._decrement_in_progress()]>
+In [11]:
+a = [1, 2, 3, 4, 5] 
+for x in range(len(a)): 
+    print (a[x])
+1
+2
+3
+4
+5
+In [12]:
+num = 75869
+count = 0
+while num != 0:
+    num = num // 10
+    count = count + 1
+print("Total digits are:", count)
+Total digits are: 5
+In [13]:
+for num in range(-10, 0, 1):
+    print(num)
+-10
+-9
+-8
+-7
+-6
+-5
+-4
+-3
+-2
+-1
+In [14]:
+for i in range(5):
+    print(i)
+else:
+    print("Done!")
+0
+1
+2
+3
+4
+Done!
+In [15]:
+quantity = 3
+totalMoney = 1000
+price = 450
+statement1 = "I have {1} dollars so I can buy {0} football for {2:.2f} dollars."
+print(statement1.format(quantity, totalMoney, price))
+I have 1000 dollars so I can buy 3 football for 450.00 dollars.
+In [ ]:
+string = input("Please Enter your Own String : ")
+alphabets = digits = special = 0
+
+for i in range(len(string)):
+    if(string[i].isalpha()):
+        alphabets = alphabets + 1
+    elif(string[i].isdigit()):
+        digits = digits + 1
+    else:
+        special = special + 1
+        
+print("\nTotal Number of Alphabets in this String :  ", alphabets)
+print("Total Number of Digits in this String :  ", digits)
+print("Total Number of Special Characters in this String :  ", special)
+In [16]:
+list = [31, 42, 13, 34, 85, 0, 99, 1, 3]
+print("The list is :")
+print(list)
+print("The elements in odd positions are : ")
+for i in range(1, len(list), 2):
+   print(list[i])
+The list is :
+[31, 42, 13, 34, 85, 0, 99, 1, 3]
+The elements in odd positions are : 
+42
+34
+0
+1
+In [17]:
+test_str = 'helloworld'
+
+print("The original string is : " + str(test_str))
+mid_str = "python"
+
+temp = test_str.split()
+mid_pos = len(temp) // 2
+
+res = temp[:mid_pos] + [mid_str] + temp[mid_pos:]
+
+res = ' '.join(res)
+ 
+print("Formulated String : " + str(res))
+The original string is : helloworld
+Formulated String : python helloworld
+In [18]:
+str1 = "Lakshmi"
+print("The original string is : " + str(str1))
+res = str1[0].lower() + str1[1:]
+print("The string after lowercasing initial character : " + str(res))
+The original string is : Lakshmi
+The string after lowercasing initial character : lakshmi
+In [19]:
+str1 = "Welcome to INDIA. India awesome, isn't it?"
+sub_string = "INDIA"
+temp_str = str1.lower()
+count = temp_str.count(sub_string.lower())
+print("The INDIA count is:", count)
+The INDIA count is: 2
+In [20]:
+str1 = "Apple"
+char_dict = dict()
+for char in str1:
+    count = str1.count(char)
+    char_dict[char] = count
+print('Result:', char_dict)
+Result: {'A': 1, 'p': 2, 'l': 1, 'e': 1}
+In [21]:
+list1 = ["M", "na", "i", "Laks"] 
+list2 = ["y", "me", "s", "hmi"]
+list3 = [i + j for i, j in zip(list1, list2)]
+print(list3)
+['My', 'name', 'is', 'Lakshmi']
+In [22]:
+numbers = [1, 2, 3, 4, 5, 6, 7]
+res = []
+for i in numbers:
+    res.append(i * i)
+print(res)
+[1, 4, 9, 16, 25, 36, 49]
+In [23]:
+l1 = [10, 20, 30, 40]
+l2 = [100, 200, 300, 400]
+
+for x, y in zip(l1, l2[::-1]):
+    print(x, y)
+10 400
+20 300
+30 200
+40 100
+In [24]:
+list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+res = list1(filter(None, list1))
+print(res)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[22], line 2
+      1 list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+----> 2 res = list1(filter(None, list1))
+      3 print(res)
+
+TypeError: 'list' object is not callable
+In [25]:
+list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+res = list(filter(None, list1))
+print(res)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[23], line 2
+      1 list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+----> 2 res = list(filter(None, list1))
+      3 print(res)
+
+TypeError: 'list' object is not callable
+In [26]:
+l1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+l1[2][2].append(7000)
+print(l1)
+[10, 20, [300, 400, [5000, 6000, 7000], 500], 30, 40]
+In [27]:
+num1= input("enter first number")
+num2=input("enter second number")
+print(num1,num2)
+<PyodideFuture pending cb=[WebLoop._decrement_in_progress()]> <PyodideFuture pending cb=[WebLoop._decrement_in_progress()]>
+In [28]:
+l1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
+sub_list = ["h", "i", "j"]
+l1[2][1][2].extend(sub_list)
+print(l1)
+['a', 'b', ['c', ['d', 'e', ['f', 'g', 'h', 'i', 'j'], 'k'], 'l'], 'm', 'n']
+In [29]:
+l1 = [5, 10, 15, 200, 25, 30, 35]
+index = l1.index(200)
+l1[index] = 20
+print(l1)
+[5, 10, 15, 20, 25, 30, 35]
+In [30]:
+l1 = [5, 20, 15, 20, 25, 50, 20]
+def remove_value(list, val):
+    return [i for i in list if i != val]
+res = remove_value(l1, 20)
+print(res)
+[5, 15, 25, 50]
+In [31]:
+keys = ["Abi", "Aashish", "Varsha"]
+values = [1, 3, 10]
+print("Original key list is : " + str(keys))
+print("Original value list is : " + str(values))
+res = {}
+for key in keys:
+    for value in values:
+        res[key] = value
+        values.remove(value)
+        break
+print("Resultant dictionary is : " + str(res))
+Original key list is : ['Abi', 'Aashish', 'Varsha']
+Original value list is : [1, 3, 10]
+Resultant dictionary is : {'Abi': 1, 'Aashish': 3, 'Varsha': 10}
+In [32]:
+def Merge(dict1, dict2):
+    return(dict2.update(dict1))
+dict1 = {'c': 1, 'd': 3}
+dict2 = {'a': 6, 'b': 10}
+print(Merge(dict1, dict2))
+print(dict2)
+None
+{'a': 6, 'b': 10, 'c': 1, 'd': 3}
+In [33]:
+Dict = {
+    "class": {
+        "student": {
+            "name": "Mike",
+            "marks": {
+                "physics": 100,
+                "history": 80
+            }
+        }
+    }
+}
+print(Dict['class']['student']['marks']['physics'])
+100
+In [34]:
+Dict = { 
+  "name": "Aakash",
+  "age":25, 
+  "salary": 20000, 
+  "city": "Chennai" }
+keys = ["name", "salary"]
+newDict = {k: Dict[k] for k in keys}
+print(newDict)
+{'name': 'Aakash', 'salary': 20000}
+In [35]:
+Dict = {
+    "name": "Aakash",
+    "age": 25,
+    "salary": 8000,
+    "city": "Bangalore"
+}
+keys = ["name", "salary"]
+Dict = {k: Dict[k] for k in Dict.keys() - keys}
+print(Dict)
+{'city': 'Bangalore', 'age': 25}
+In [36]:
+Dict = {'a': 100, 'b': 200, 'c': 300}
+if 100 in Dict.values():
+    print('200 present in the given dictionary')
+200 present in the given dictionary
+In [37]:
+Dict = {
+    "name": "Akshaya",
+    "age": 20,
+    "salary": 9000,
+    "city": "Hyderabad"
+}
+Dict['location'] = Dict.pop('city')
+print(Dict)
+{'name': 'Akshaya', 'age': 20, 'salary': 9000, 'location': 'Hyderabad'}
+In [38]:
+Dict = {
+    'Physics': 82,
+    'Maths': 65,
+    'history': 75
+}
+print(min(Dict, key=Dict.get))
+Maths
+In [39]:
+Dict = {
+    'emp1': {'name': 'Lakshmi', 'salary': 12000},
+    'emp2': {'name': 'Praga', 'salary': 14000},
+    'emp3': {'name': 'Shwetha', 'salary': 16000}
+}
+Dict['emp2']['salary'] = 18000
+print(Dict)
+{'emp1': {'name': 'Lakshmi', 'salary': 12000}, 'emp2': {'name': 'Praga', 'salary': 18000}, 'emp3': {'name': 'Shwetha', 'salary': 16000}}
+In [40]:
+t1 = (10, 20, 30, 40, 50)
+t1 = t1[::-1]
+print(t1)
+(50, 40, 30, 20, 10)
+In [41]:
+t1 = ("Black", [10, 20, 30], (5, 15, 25))
+print(t1[1][1])
+20
+In [42]:
+t1= (50)
+print(t1)
+50
+In [43]:
+t1 = (10, 20, 30, 40)
+a, b, c, d = t1
+print(a)
+print(b)
+print(c)
+print(d)
+10
+20
+30
+40
+In [44]:
+t1 = (18, 20)
+t2 = (4, 97)
+t1, t2 = t2, t1
+print(t2)
+print(t1)
+(18, 20)
+(4, 97)
+In [45]:
+t1 = (10, 20, 30, 40, 50, 60)
+t2 = t1[3:-1]
+print(t2)
+(40, 50)
+In [46]:
+t1 = (11, [22, 33], 44, 55)
+t1[1][0] = 222
+print(t1)
+(11, [222, 33], 44, 55)
+In [47]:
+tuple1 = (('a', 11), ('b', 12), ('c', 13), ('d', 14))
+tuple1 = tuple(sorted(list(tuple1), key=lambda x: x[1]))
+print(t1)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[45], line 2
+      1 tuple1 = (('a', 11), ('b', 12), ('c', 13), ('d', 14))
+----> 2 tuple1 = tuple(sorted(list(tuple1), key=lambda x: x[1]))
+      3 print(t1)
+
+TypeError: 'list' object is not callable
+In [48]:
+t1 = (50, 10, 60, 70, 50)
+print(t1.count(50))
+2
+In [49]:
+set = {"Yellow", "Orange", "Black"}
+list = ["Blue", "Green", "Red"]
+set.update(list)
+print(set)
+{'Green', 'Red', 'Black', 'Yellow', 'Blue', 'Orange'}
+In [50]:
+def check(t):
+    return all(i == t[0] for i in t)
+t1 = (45, 45, 45, 45)
+print(check(t1))
+True
+In [51]:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+print(set1.intersection(set2))
+{40, 50, 30}
+In [52]:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+print(set1.union(set2))
+{70, 40, 10, 50, 20, 60, 30}
+In [53]:
+set1 = {10, 20, 30}
+set2 = {20, 40, 50}
+set1.difference_update(set2)
+print(set1)
+{10, 30}
+In [54]:
+set1 = {10, 20, 30, 40, 50}
+set1.difference_update({10, 20, 30})
+print(set1)
+{50, 40}
+In [55]:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+print(set1.symmetric_difference(set2))
+{20, 70, 10, 60}
+In [56]:
+set1 = {10, 20, 30, 40, 50}
+set2 = {60, 70, 80, 90, 10}
+if set1.isdisjoint(set2):
+  print("Two sets have no items in common")
+else:
+  print("Two sets have items in common")
+  print(set1.intersection(set2))
+Two sets have items in common
+{10}
+In [57]:
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+set1.intersection_update(set2)
+print(set1)
+{40, 50, 30}
